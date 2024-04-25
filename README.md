@@ -1,7 +1,7 @@
-# Poker CFR (Counter Factual Regret Minimization)
-## This program uses counter factual regret minimization to solve the nash equilibrium (Most Optimal Strategy) for the flop for heads up (1v1) poker. It also contains the logic for poker, and calculating poker odds. This is implemented in the following files: oth.py, per_calc.py, poker_calc.py. The poker_cfr_flop_2.py file contains the logic for the CFR.
+# Poker CFR (Counterfactual Regret Minimization)
+## This program uses counterfactual regret minimization to solve the nash equilibrium (Most Optimal Strategy) for the flop for heads up (1v1) poker. It also contains the logic for poker, and calculating poker odds. This is implemented in the following files: oth.py, per_calc.py, poker_calc.py. The poker_cfr_flop_2.py file contains the logic for the CFR.
 
-# Counter Factual Regret Minimization
+# Counterfactual Regret Minimization
 ### CFR is a very effective way of calculating the risk and reward for decisions in games where we don't have all of the information. It learns by determining the reward for decisions, and adjusting it's strategy accordingly. An easy game we can apply this to is Rock, Paper, Scissors (RPS). Obviously the nash equilibrium is picking at random because if you follow any sort of pattern, your opponent can take advantage of it. So to calculate the regret for a decision in RPS, we can use the example of Rock vs. Paper. The person who chose rock would recieve regret for that decision, and therefore be more likely to not choice that in the future. They will also be more inclined to choose scissors because that would've made them win. And paper would be unaffected. If you keep doing this, you will eventually come to the conclusion that choosing at random is the best strategy. It is a lot more complicated in poker, but it is the same idea.
 
 # Modifications for Efficiency

@@ -9,6 +9,11 @@
 
 # **RESULTS!!!**
 ## Hopefully my explanation has made you as excited about this as I am. After training on 50,000 games of poker, it has learned a lot. I have a couple images, one from the 50th epoch, and one from the 5000th epoch. This way we can really see what it's learned. First, I am going to explain how to read the data.
-![data](0_2030.png)
+![data](0_4021.png)
 #### Some of the lines are wrapping, but each new line starts with a tuple. Each line is formatted like this - (Win classification(higher is better), Tie classification) | Number of players | History ` [Strategy] ` [Regret sum]
-#### The strategy and regret sum's length depends on the number of actions.
+#### The strategy and regret sum's length depends on the number of actions. For the history, each move is seperated by a comma, and each move consists of 2 characters, the first being the index of the player, and the second being the move. x means check, f means fold, A means all in, and the numbers are multiples of big blinds to raise. This sequence - 1x,01,11 - means that the second player(because of index) checks, the first player raises 1 BB, and the second player raises them another BB.
+# 50th Epoch
+## That picture is the 50th epoch. I will discuss the first line. First of all, we can see that it's winning classification is 4(out of 5). So far, with a 4/5 hand, it is leaning towards raising 4BB, but is also considering raising 5BB. Not awful for only 50 epochs. However, on the second line, we can see that it is going to make a huge mistake. With a winning classification of 2, it wants to go all in when someone raises it 1BB. This is obviously a bad decision. If we look a little bit lower, we can see why it wants to do that. It thinks that in every scenario below it, going all in is the best decision.
+![5k](100_4021.png)
+# 5000th Epoch
+

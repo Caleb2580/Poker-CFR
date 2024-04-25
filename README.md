@@ -16,4 +16,7 @@
 ## That picture is the 50th epoch. I will discuss the first line. First of all, we can see that it's winning classification is 4(out of 5). So far, with a 4/5 hand, it is leaning towards raising 4BB, but is also considering raising 5BB. Not awful for only 50 epochs. However, on the second line, we can see that it is going to make a huge mistake. With a winning classification of 2, it wants to go all in when someone raises it 1BB. This is obviously a bad decision. If we look a little bit lower, we can see why it wants to do that. It thinks that in every scenario below it, going all in is the best decision.
 ![5k](100_4021.png)
 # 5000th Epoch
+## After hours of learning, it has changed it's strategies. If we look at the first line again, it now wants to go with a lower bet, but isn't opposed to a higher bet. We can also see that on the second line, the player with the winning classification of 2 is going to fold 57% of the time, and never raise. This is much better than going all in. We can also see below, if it goes any further, 4 is prepared to go all in, and 2 is prepared to fold. This is a lot better.
+
+## Although this example is pretty surface level, while testing the bot against some friends, I noticed some pretty cool things. First of all, it was very good at applying pressure, and knowing when to fold. And second of all, it was very good at bluffing.
 
